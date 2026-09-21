@@ -26,6 +26,8 @@ live file at any time.
 - **Backup** — the untouched file is copied to
   `~/Library/Application Support/HostsWitch/hosts.original` before the first
   write; Settings can restore it.
+- **Launch at login** — a Settings toggle (`SMAppService`); started that way,
+  HostsWitch goes straight to the menu bar without opening its window.
 - **Pause** — leaves `/etc/hosts` exactly as the system had it while keeping
   your on/off choices for later.
 - **Permissions** — if `/etc/hosts` is root-owned, every cast asks for your

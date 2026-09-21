@@ -1,7 +1,22 @@
 import SwiftUI
 
+/// Keeps the window closed when the system launched us as a login item;
+/// the menu-bar hat is all that's wanted then.
+final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        let event = NSAppleEventManager.shared().currentAppleEvent
+        let launchedAtLogin = event?.eventID == kAEOpenApplication
+            && event?.paramDescriptor(forKeyword: keyAEPropData)?.enumCodeValue == keyAELaunchedAsLogInItem
+        if launchedAtLogin {
+            for w in NSApp.windows where w.identifier?.rawValue == "main" { w.close() }
+        }
+    }
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool { true }
+}
+
 @main
 struct HostsWitchApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @StateObject private var store: HostsStore
     @Environment(\.openWindow) private var openWindow
 

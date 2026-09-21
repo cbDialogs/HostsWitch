@@ -1,5 +1,6 @@
 import SwiftUI
 import Combine
+import ServiceManagement
 
 enum ViewMode { case edit, view }
 
@@ -320,6 +321,21 @@ final class HostsStore: ObservableObject {
             lastError = error.localizedDescription
             return false
         }
+    }
+
+    // MARK: - launch at login
+
+    var launchesAtLogin: Bool { SMAppService.mainApp.status == .enabled }
+
+    func setLaunchAtLogin(_ on: Bool) {
+        do {
+            if on { try SMAppService.mainApp.register() }
+            else { try SMAppService.mainApp.unregister() }
+            lastError = nil
+        } catch {
+            lastError = error.localizedDescription
+        }
+        objectWillChange.send()
     }
 
     func takeOwnership(_ on: Bool) {

@@ -585,6 +585,12 @@ struct SettingsView: View {
                     Button("Let HostsWitch own /etc/hosts…") { store.takeOwnership(true) }
                 }
             }
+            Section("Startup") {
+                Toggle("Launch at login", isOn: Binding(
+                    get: { store.launchesAtLogin }, set: { store.setLaunchAtLogin($0) }))
+                Text("When launched at login, HostsWitch stays in the menu bar and does not open its window.")
+                    .font(.callout).foregroundStyle(.secondary)
+            }
             Section("Safety") {
                 Text("The first cast saved a copy of the untouched file.")
                 HStack {
