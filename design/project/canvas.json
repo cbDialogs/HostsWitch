@@ -1,0 +1,188 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-09-21T19:48:07Z"
+  },
+  "title": "HostsWitch Styles",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 300,
+      "w": 1280,
+      "h": 820,
+      "title": "Cupertino · Edit Hosts"
+    },
+    "Cupertino-View.dc.html": {
+      "x": 1360,
+      "y": 300,
+      "w": 1280,
+      "h": 820,
+      "title": "Cupertino · View Hosts"
+    },
+    "Cupertino-Menu.dc.html": {
+      "x": 2720,
+      "y": 300,
+      "w": 480,
+      "h": 620,
+      "title": "Cupertino · Menu bar"
+    },
+    "Slate-Edit.dc.html": {
+      "x": 0,
+      "y": 1560,
+      "w": 1280,
+      "h": 820,
+      "title": "Slate · Edit Hosts"
+    },
+    "Slate-View.dc.html": {
+      "x": 1360,
+      "y": 1560,
+      "w": 1280,
+      "h": 820,
+      "title": "Slate · View Hosts"
+    },
+    "Slate-Menu.dc.html": {
+      "x": 2720,
+      "y": 1560,
+      "w": 480,
+      "h": 620,
+      "title": "Slate · Menu bar"
+    },
+    "Terminal-Edit.dc.html": {
+      "x": 0,
+      "y": 2820,
+      "w": 1280,
+      "h": 820,
+      "title": "Terminal · Edit Hosts"
+    },
+    "Terminal-View.dc.html": {
+      "x": 1360,
+      "y": 2820,
+      "w": 1280,
+      "h": 820,
+      "title": "Terminal · View Hosts"
+    },
+    "Terminal-Menu.dc.html": {
+      "x": 2720,
+      "y": 2820,
+      "w": 480,
+      "h": 620,
+      "title": "Terminal · Menu bar"
+    },
+    "Coven-Edit.dc.html": {
+      "x": 0,
+      "y": 4080,
+      "w": 1280,
+      "h": 820,
+      "title": "Coven · Edit Hosts"
+    },
+    "Coven-View.dc.html": {
+      "x": 1360,
+      "y": 4080,
+      "w": 1280,
+      "h": 820,
+      "title": "Coven · View Hosts"
+    },
+    "Coven-Menu.dc.html": {
+      "x": 2720,
+      "y": 4080,
+      "w": 480,
+      "h": 620,
+      "title": "Coven · Menu bar"
+    },
+    "Hearth-Edit.dc.html": {
+      "x": 0,
+      "y": 5340,
+      "w": 1280,
+      "h": 820,
+      "title": "Hearth · Edit Hosts"
+    },
+    "Hearth-View.dc.html": {
+      "x": 1360,
+      "y": 5340,
+      "w": 1280,
+      "h": 820,
+      "title": "Hearth · View Hosts"
+    },
+    "Hearth-Menu.dc.html": {
+      "x": 2720,
+      "y": 5340,
+      "w": 480,
+      "h": 620,
+      "title": "Hearth · Menu bar"
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Cupertino-View.dc.html",
+    "Cupertino-Menu.dc.html",
+    "Slate-Edit.dc.html",
+    "Slate-View.dc.html",
+    "Slate-Menu.dc.html",
+    "Terminal-Edit.dc.html",
+    "Terminal-View.dc.html",
+    "Terminal-Menu.dc.html",
+    "Coven-Edit.dc.html",
+    "Coven-View.dc.html",
+    "Coven-Menu.dc.html",
+    "Hearth-Edit.dc.html",
+    "Hearth-View.dc.html",
+    "Hearth-Menu.dc.html"
+  ],
+  "notes": {
+    "opt-1": {
+      "x": 0,
+      "y": 50,
+      "w": 1280,
+      "maxH": 220,
+      "text": "1 · CUPERTINO — the safe one.\nStock macOS: grey source-list sidebar, unified toolbar with an Edit/View segmented control, SF Mono editor, standard Revert/Apply push buttons, blue selection. Closest to iHosts.\nTradeoff: indistinguishable from every other Mac utility. Nothing here is yours.",
+      "size": "m"
+    },
+    "opt-2": {
+      "x": 0,
+      "y": 1310,
+      "w": 1280,
+      "maxH": 220,
+      "text": "2 · SLATE — dark developer tool (Tower / Kaleidoscope lineage).\nGraphite panels, cool-blue accent, JetBrains Mono editor with line numbers and IP/hostname tinting. Each node carries a real toggle switch in the sidebar, so you switch environments without leaving the list. Status bar shows active count + last apply.\nTradeoff: dark-only as drawn; toggles make the sidebar busier.",
+      "size": "m"
+    },
+    "opt-3": {
+      "x": 0,
+      "y": 2570,
+      "w": 1280,
+      "maxH": 220,
+      "text": "3 · TERMINAL — monospace everything, hairlines, no chrome.\nIBM Plex Mono for UI and editor, forest-green accent, tag-style ‘1 of 3’ badges on each group, square corners, status bar. Feels like a config file that grew a sidebar.\nTradeoff: mono UI type is less legible at 13px than SF; least ‘Mac-like’ of the straight three.",
+      "size": "m"
+    },
+    "opt-4": {
+      "x": 0,
+      "y": 3830,
+      "w": 1280,
+      "maxH": 220,
+      "text": "4 · COVEN — the witch theme, moonlit.\nDeep indigo panels, moon-silver text, ember-orange accent; active nodes and the Active pill glow faintly. Cormorant Garamond for the window title and breadcrumb, JetBrains Mono editor. Menu-bar icon is a witch’s hat; Apply becomes ‘Cast’ (optional wording — everything else stays plain).\nTradeoff: a strong mood — some people will never want a purple hosts editor.",
+      "size": "m"
+    },
+    "opt-5": {
+      "x": 0,
+      "y": 5090,
+      "w": 1280,
+      "maxH": 220,
+      "text": "5 · HEARTH — the witch theme, cottage edition.\nParchment and cream panels, candle-amber accent, dried-herb green for active nodes, muted traffic lights. Newsreader serif titles (as in MarkDownNotes) over an IBM Plex Mono editor. Cauldron in the toolbar and menu bar. The friendlier take on Hosts-Witch.\nTradeoff: warm palette lowers contrast on the small mono text; watch legibility in bright rooms.",
+      "size": "m"
+    },
+    "how-to-read": {
+      "x": 3300,
+      "y": 300,
+      "w": 420,
+      "maxH": 620,
+      "text": "How to read this canvas.\n\nFive directions, one row each: the Edit window, the read-only View Hosts window, and the menu-bar dropdown.\n\nEvery artboard shows the same three groups (Default, Acme, Client B), the same selected node (Acme › Development) and the same /etc/hosts — only style varies.\n\nOptions 1–3 are straight macOS looks; 4–5 carry the Hosts-Witch theme. Mix and match: a palette from one row on the layout of another is fair game, as MarkDownNotes did.\n\nStatic pictures — nothing clicks yet.",
+      "size": "m",
+      "fill": "orange"
+    }
+  },
+  "designSystems": []
+}

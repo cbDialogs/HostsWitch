@@ -1,0 +1,5 @@
+App/.build/
+App/AppIcon.iconset/
+HostsWitch.app/
+*.dmg
+.DS_Store
