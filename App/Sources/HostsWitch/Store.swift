@@ -38,8 +38,12 @@ final class HostsStore: ObservableObject {
     private var suppressPersist = true
 
     init() {
-        let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        supportDir = base.appendingPathComponent("HostsWitch")
+        if let dir = ProcessInfo.processInfo.environment["HOSTSWITCH_SUPPORT_DIR"] {
+            supportDir = URL(fileURLWithPath: dir)
+        } else {
+            let base = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+            supportDir = base.appendingPathComponent("HostsWitch")
+        }
         libraryURL = supportDir.appendingPathComponent("library.json")
         try? FileManager.default.createDirectory(at: supportDir, withIntermediateDirectories: true)
 

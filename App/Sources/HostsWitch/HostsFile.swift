@@ -6,7 +6,9 @@ import Foundation
 /// and `endMarker`. Everything outside it is the user's (or the system's)
 /// and is passed through untouched.
 enum HostsFile {
-    static let path = "/etc/hosts"
+    /// `HOSTSWITCH_HOSTS_FILE` points the app at a stand-in file, which is
+    /// how the README screenshots are taken without touching the real one.
+    static let path = ProcessInfo.processInfo.environment["HOSTSWITCH_HOSTS_FILE"] ?? "/etc/hosts"
     static let url = URL(fileURLWithPath: path)
     static let beginMarker = "# ==== HostsWitch begin (managed by HostsWitch.app — edits inside this block are overwritten) ===="
     static let endMarker   = "# ==== HostsWitch end ===="
@@ -115,7 +117,7 @@ enum HostsFile {
         try text.write(to: tmp, atomically: true, encoding: .utf8)
         defer { try? FileManager.default.removeItem(at: tmp) }
         try runPrivileged(
-            "/bin/cp '\(tmp.path)' /etc/hosts && /bin/chmod 644 /etc/hosts && " +
+            "/bin/cp '\(tmp.path)' '\(path)' && /bin/chmod 644 '\(path)' && " +
             "/usr/bin/dscacheutil -flushcache; /usr/bin/killall -HUP mDNSResponder 2>/dev/null; true")
     }
 
@@ -123,7 +125,7 @@ enum HostsFile {
     /// after one administrator prompt, so later writes need no password.
     static func setOwnership(toCurrentUser: Bool) throws {
         let owner = toCurrentUser ? "\(getuid())" : "root"
-        try runPrivileged("/usr/sbin/chown \(owner):wheel /etc/hosts && /bin/chmod 644 /etc/hosts")
+        try runPrivileged("/usr/sbin/chown \(owner):wheel '\(path)' && /bin/chmod 644 '\(path)'")
     }
 
     // MARK: - process helpers

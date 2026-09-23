@@ -1,0 +1,90 @@
+{
+  "paused": false,
+  "items": [
+    {
+      "node": {
+        "_0": {
+          "id": "C0132D2E-FE76-4867-83A2-2A8DD2390798",
+          "name": "Local Tools",
+          "content": "# Handy names for the machines on my desk\n127.0.0.1       mysite.test\n127.0.0.1       mailpit.test\n192.168.1.20    nas.lan\n192.168.1.30    printer.lan\n",
+          "isActive": true
+        }
+      }
+    },
+    {
+      "group": {
+        "_0": {
+          "id": "BA28119C-2051-4051-8DA1-557B405BC900",
+          "name": "Acme Storefront",
+          "nodes": [
+            {
+              "id": "F0231D3B-A717-4A6B-907D-CD897AE700DC",
+              "name": "Development",
+              "content": "# Everything on the local Docker stack\n127.0.0.1       shop.acme.test\n127.0.0.1       api.acme.test\n127.0.0.1       cdn.acme.test\n127.0.0.1       admin.acme.test\n\n# Payments sandbox runs in the VM\n192.168.64.3    payments.acme.test\n",
+              "isActive": false
+            },
+            {
+              "id": "E71FA042-AC79-4C96-B4FE-09CE41B1867A",
+              "name": "Staging",
+              "content": "# Shared staging cluster\n10.20.0.14      shop.acme.example\n10.20.0.14      api.acme.example\n10.20.0.15      cdn.acme.example\n10.20.0.16      admin.acme.example\n\n# Search is still on the old box\n10.20.0.40      search.acme.example\n",
+              "isActive": true
+            },
+            {
+              "id": "F05411F4-699A-46F6-B683-DC6C6956AA12",
+              "name": "Production",
+              "content": "# Nothing here \u2014 production resolves through real DNS.\n",
+              "isActive": false
+            }
+          ],
+          "exclusive": true
+        }
+      }
+    },
+    {
+      "group": {
+        "_0": {
+          "id": "87727211-28D9-45F6-8F3B-0F4FB2ED010E",
+          "name": "Blog",
+          "nodes": [
+            {
+              "id": "5AA4A054-F275-4EC2-B618-CC1DD706C1EE",
+              "name": "Local",
+              "content": "127.0.0.1       blog.test\n127.0.0.1       www.blog.test\n",
+              "isActive": false
+            },
+            {
+              "id": "1F7EFD60-D856-410C-AE48-D07A233DE1DD",
+              "name": "Preview",
+              "content": "203.0.113.42    preview.blog.example\n",
+              "isActive": false
+            }
+          ],
+          "exclusive": true
+        }
+      }
+    },
+    {
+      "group": {
+        "_0": {
+          "id": "5DB0B901-D99C-449D-B7C4-1F1BA5778ED8",
+          "name": "Blocklist",
+          "nodes": [
+            {
+              "id": "28C76840-7E3F-47EF-AB1A-5AE07FB59EC3",
+              "name": "Social",
+              "content": "# Focus mode\n0.0.0.0         twitter.com\n0.0.0.0         x.com\n0.0.0.0         www.reddit.com\n0.0.0.0         news.ycombinator.com\n",
+              "isActive": false
+            },
+            {
+              "id": "E1A55F2A-FDB2-4E9F-B1B4-8C02C49B904E",
+              "name": "Trackers",
+              "content": "0.0.0.0         tracker.example.net\n0.0.0.0         ads.example.org\n",
+              "isActive": true
+            }
+          ],
+          "exclusive": false
+        }
+      }
+    }
+  ]
+}

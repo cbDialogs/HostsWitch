@@ -1,0 +1,30 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+# ==== HostsWitch begin (managed by HostsWitch.app — edits inside this block are overwritten) ====
+# ---- Local Tools ----
+# Handy names for the machines on my desk
+127.0.0.1       mysite.test
+127.0.0.1       mailpit.test
+192.168.1.20    nas.lan
+192.168.1.30    printer.lan
+# ---- Acme Storefront / Staging ----
+# Shared staging cluster
+10.20.0.14      shop.acme.example
+10.20.0.14      api.acme.example
+10.20.0.15      cdn.acme.example
+10.20.0.16      admin.acme.example
+
+# Search is still on the old box
+10.20.0.40      search.acme.example
+# ---- Blocklist / Trackers ----
+0.0.0.0         tracker.example.net
+0.0.0.0         ads.example.org
+# ==== HostsWitch end ====
